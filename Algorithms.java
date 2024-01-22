@@ -6,8 +6,8 @@ public class Algorithms {
         Scanner scan = new Scanner(System.in);
     
         //My algorithm to gain strength w/o weight lifting
-
-        System.out.println("Wear gym clothing");
+        System.out.println("At home or gym");
+        System.out.println("Wear appropriate clothing");
         System.out.println("Prepare yoga mat");
         System.out.println("Decide to exercise upper or lower body");
 
