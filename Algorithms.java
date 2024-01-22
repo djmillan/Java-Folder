@@ -11,7 +11,7 @@ public class Algorithms {
         System.out.println("Prepare yoga mat");
         System.out.println("Decide to exercise upper or lower body");
 
-        String decision = scan.nextLine();
+        String decision = scan.nextLine(); //Scanner in use
         if(decision.equalsIgnoreCase("Upper")) {
             System.out.println("Start upper body warm-up");
         } else if(decision.equalsIgnoreCase("Lower")) {
