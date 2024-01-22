@@ -6,6 +6,7 @@ public class Algorithms {
         Scanner scan = new Scanner(System.in);
     
         //My algorithm to gain strength w/o weight lifting
+        
         System.out.println("At home or gym");
         System.out.println("Wear appropriate clothing");
         System.out.println("Prepare yoga mat");
@@ -16,7 +17,7 @@ public class Algorithms {
             System.out.println("Start upper body warm-up");
         } else if(decision.equalsIgnoreCase("Lower")) {
             System.out.println("Start lower body warm-up");
-        } 
+        }
             System.out.println("Do dynamic stretching");
         for(int i = 0; i < 1;) {
             System.out.println("Does the body feel warmed up? (Yes/No)");
@@ -36,5 +37,20 @@ public class Algorithms {
         System.out.println("Take a warm bath");
         System.out.println("Change clothing");
         System.out.println("Don't miss anabolic window. Eat protein.");
+
+        int j,i;
+        int counter = 0;
+        int[] sort = {1,4,5,6,7,8,6,4,3,0,5,3,7};
+
+        for(i = 0; i < sort.length;i++) {
+            for(j = i + 1; j < sort.length;j++ ) {
+                counter++;
+            if(sort[i] == sort[j]) {
+                System.out.println("Duplicate elements found!");
+                break;
+                }
+            }
+        }
+        System.out.println("The time complexity is: "+counter);   
     }
 }
