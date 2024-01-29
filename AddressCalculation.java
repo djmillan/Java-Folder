@@ -11,17 +11,17 @@ public class AddressCalculation {
         System.out.print("Enter dimensions >> ");
         int dimensions = scan.nextInt();
         int[] upperBounds = new int[dimensions];
-        int counter = 0;
+        int count = 0;
         for(int i = 0; i < upperBounds.length;i++) {
-            System.out.print("Enter #"+ ++counter +" upper bound for each dimension >> ");
+            System.out.print("Enter #"+ ++count +" upper bound for each dimension >> ");
             int upperBound = scan.nextInt();
             upperBounds[i] += upperBound;
         }
         int[] address = new int[dimensions];
         {
-            counter = 0;
-            for(int i = 0; i < address.length; i++) {`
-                System.out.print("Address #"+ ++counter +" >> "); //suggestions here how to turn it back to 0, or any alternatives for counting
+            count = 0;
+            for(int i = 0; i < address.length; i++) {
+                System.out.print("Address #"+ ++count +" >> "); //any alternatives for counting
                 int addresses = scan.nextInt();
                 address[i] = addresses;
             } 
