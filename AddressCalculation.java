@@ -1,10 +1,6 @@
 import java.util.Scanner;
 
 public class AddressCalculation {
-
-    //public static int dimensions;
-    
-    // public static int[] array = new int[dimensions];
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
@@ -24,23 +20,29 @@ public class AddressCalculation {
                 System.out.print("Address #"+ ++count +" >> "); //any alternatives for counting
                 int addresses = scan.nextInt();
                 address[i] = addresses;
-            } 
+            }
         }
         System.out.print("Enter for Starting point (B) >> ");
         int B = scan.nextInt();
         System.out.print("Enter for weight (w) >> ");
         int w = scan.nextInt();
+        int sum = 0;
         try{
-        for(int i = 0; i < dimensions; i++) {
-            for(int j = 1; j <= dimensions;j++) {
-                address[i] *= upperBounds[j];
-                address[i] += address[j];
-                System.out.println(B+w*(address[i])); //print the calculated answer outside of this scope?
+            int k = 1;
+            for(int i = 0; i < dimensions; i++) {
+                for(int j = k; j < dimensions;j++) {
+                    address[i] *= upperBounds[j];
+                } k++;
+                sum += address[i];
             }
-        } //error exception out of bounds
-            
+            System.out.println(B+w*(sum));
         } catch(IndexOutOfBoundsException e) {
-            System.out.println(e.getMessage());
+            System.out.println();
         }
     }
 }
+/*
+ * Took me 2-3 days to finalize this problem, 
+ * I need to improve the knack of problem solving, 
+ * dividing it into chunks and having the understanding of ways to solve it.
+ */
