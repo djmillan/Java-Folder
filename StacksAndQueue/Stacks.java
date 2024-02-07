@@ -18,7 +18,7 @@ public class Stacks {
             for(String elemString : optioStrings){
                 System.out.print(elemString.replace(",","        "));
             }
-            System.out.print("\nEnter your option >> ");
+            System.out.print("\nType in your option >> ");
             int option = scan.nextInt();
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
@@ -49,33 +49,33 @@ public class Stacks {
                 }
             } else if(option == 3) {
                 try {
-                    System.out.println("Initial Stacks: "+stacks);
+                    System.out.println("Initial Stack: "+stacks);
                     System.out.println("The last element is: "+stacks.peek());
                 } catch(EmptyStackException e) {
-                    System.out.println("At the moment this seems to be: "+e);
+                    System.out.println("At the moment this seems to be: "+e+"\nYou must push values first, then you can avoid the thrown exception.");
                     continue;
                 }
             } else if(option == 4) {
                 try {
-                    System.out.println("Initial Stacks: "+stacks);
+                    System.out.println("Initial Stack: "+stacks);
                     System.out.print("Enter your search >> ");
                     int input = scan.nextInt();
                     Object seaObject = stacks.search(input);
                     if(stacks.search(input) == -1) {
-                        System.out.println("The stack does not contain: "+seaObject);
+                        System.out.println("The Stack does not contain: "+seaObject);
                     } else {
-                        System.out.println("The stack contains: "+seaObject+"\nSearched element value: "+seaObject);
+                        System.out.println("The Stack contains: "+seaObject+"\nSearched element value: "+seaObject);
                     }
                 } catch(EmptyStackException e) {
-                    System.out.println("Similarly this experience: "+e);
+                    System.out.println("Similarly this experience: "+e+"\nMust push values, to be able to avoid the exception.");
                     continue;
                 }
             } else if(option == 5) {
                 StacksAndQueues stacksAndQueues = new StacksAndQueues();
-                System.out.println("Welcome back! What do you want to do today?");
+                System.out.println("Welcome back! Choose an option for today!");
                 stacksAndQueues.menu();
             } else {
-                System.out.println("Seems like you input something invalid. Please try again.");
+                System.out.println("Seems like you inserted something invalid. Please try again.");
                 continue;
             }
         }
