@@ -14,8 +14,8 @@ public class Stacks {
         while(true) {
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.out.print("Choose an option from the following:\n");
-            String[] optioStrings = {",[1]Push,[2]Pop,[3]Peek,[4]Search,[5]Exit"};
-            for(String elemString : optioStrings){
+            String[] optionStrings = {",[1]Push,[2]Pop,[3]Peek,[4]Search,[5]Exit"};
+            for(String elemString : optionStrings){
                 System.out.print(elemString.replace(",","        "));
             }
             System.out.print("\nType in your option >> ");
