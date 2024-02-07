@@ -40,7 +40,6 @@ public class Stacks {
                 } else {
                     System.out.println("Stack is FULL.");
                 }
-                continue;
             } else if(option == 2) {
                 if(!stacks.isEmpty()) {
                     Object popObject = stacks.pop();
