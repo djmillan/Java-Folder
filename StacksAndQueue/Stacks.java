@@ -8,63 +8,63 @@ public class Stacks {
     public static void Stacks() {
 
         Scanner scan = new Scanner(System.in);
-        Stack<Object> stacks = new Stack<>();
-        System.out.print("Max TOP >> ");
+        Stack<Object> stack = new Stack<>();
+        System.out.print("Maximum TOP >> ");
         int top = scan.nextInt();
         while(true) {
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.out.print("Choose an option from the following:\n");
             String[] optionStrings = {",[1]Push,[2]Pop,[3]Peek,[4]Search,[5]Exit"};
-            for(String elemString : optionStrings){
-                System.out.print(elemString.replace(",","        "));
+            for(String elementString : optionStrings){
+                System.out.print(elementString.replace(",","        "));
             }
             System.out.print("\nType in your option >> ");
             int option = scan.nextInt();
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
             if(option == 1) {
-                if(stacks.size() < top) {
+                if(stack.size() < top) {
                     System.out.print("Push value >> ");
                     scan.nextLine();
-                    String input = scan.nextLine();
+                    String elementValue = scan.nextLine();
                     try {
-                        int userInput = Integer.parseInt(input);
-                        stacks.push(userInput);
-                        String result = MessageFormat.format("Pushed Integer value: {0}",userInput);
+                        int storedValue = Integer.parseInt(elementValue);
+                        stack.push(storedValue);
+                        String result = MessageFormat.format("Pushed Integer value: {0}",storedValue);
                         System.out.println(result);
                     } catch (NumberFormatException e) {
-                        stacks.push(input);
-                        String result = MessageFormat.format("Pushed String value: {0}",input);
+                        stack.push(elementValue);
+                        String result = MessageFormat.format("Pushed String value: {0}",elementValue);
                         System.out.println(result);
                     } 
                 } else {
                     System.out.println("Stack is FULL.");
                 }
             } else if(option == 2) {
-                if(!stacks.isEmpty()) {
-                    Object popObject = stacks.pop();
+                if(!stack.isEmpty()) {
+                    Object popObject = stack.pop();
                     System.out.println("Popped value: "+ popObject);
                 } else {
                     System.out.println("Stack is EMPTY.");
                 }
             } else if(option == 3) {
                 try {
-                    System.out.println("Initial Stack: "+stacks);
-                    System.out.println("The last element is: "+stacks.peek());
+                    System.out.println("Initial Stack: "+stack);
+                    System.out.println("The last element is: "+stack.peek());
                 } catch(EmptyStackException e) {
                     System.out.println("At the moment this seems to be: "+e+"\nYou must push values first, then you can avoid the thrown exception.");
                     continue;
                 }
             } else if(option == 4) {
                 try {
-                    System.out.println("Initial Stack: "+stacks);
+                    System.out.println("Initial Stack: "+stack);
                     System.out.print("Enter your search >> ");
-                    int input = scan.nextInt();
-                    Object seaObject = stacks.search(input);
-                    if(stacks.search(input) == -1) {
-                        System.out.println("The Stack does not contain: "+seaObject);
+                    int elementValue = scan.nextInt();
+                    Object searchObject = stack.search(elementValue);
+                    if(stack.search(elementValue) == -1) {
+                        System.out.println("The Stack does not contain: "+searchObject);
                     } else {
-                        System.out.println("The Stack contains: "+seaObject+"\nSearched element value: "+seaObject);
+                        System.out.println("The Stack contains: "+searchObject+"\nSearched element value: "+searchObject);
                     }
                 } catch(EmptyStackException e) {
                     System.out.println("Similarly this experience: "+e+"\nMust push values, to be able to avoid the exception.");
