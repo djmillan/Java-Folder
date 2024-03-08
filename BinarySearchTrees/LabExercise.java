@@ -49,7 +49,7 @@ public class LabExercise {
                 case 2:
                     System.out.print("Enter the index you would like to get >> ");
                     int yourIndex = scan.nextInt();
-                    System.out.println("You get"+ binarySearchTrees.get(yourIndex));
+                    System.out.println("Get: "+ binarySearchTrees.get(yourIndex));
                     break;
                 case 3:
                     System.out.println(binarySearchTrees);
@@ -61,8 +61,8 @@ public class LabExercise {
                     break;
                 case 4:
                     System.out.println("Enter the value to remove >> ");
-                    System.out.println("Initial values: "+binarySearchTrees);
                     int removeValueAt = scan.nextInt();
+                    System.out.println("Initial values: "+binarySearchTrees);
                     binarySearchTrees.remove(removeValueAt);
                     String output = MessageFormat.format("Has removed: {0}", removeValueAt);
                     System.out.println(output);
